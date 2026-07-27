@@ -67,9 +67,9 @@ For the Zarr explainer, I asked Fable to build 3 versions of this explainer, in 
 I asked Claude to make multiple versions with more or less technical depths each time:
 
 <p align="center">
-  <img src="img/zarr_explain_A.png" alt="Less technical version" width="32%" />
-  <img src="img/zarr_explain_B.png" alt="Middle technical version" width="32%" />
-  <img src="img/zarr_explain_C.png" alt="Most technical version" width="32%" />
+  <img src="img/zarr_explain_A.png" alt="Less technical version" width="32%" align="middle" />
+  <img src="img/zarr_explain_B.png" alt="Middle technical version" width="32%" align="middle" />
+  <img src="img/zarr_explain_C.png" alt="Most technical version" width="32%" align="middle" />
 </p>
 
 _Left to right: least technical to most technical. Click any of them to see the full size._
