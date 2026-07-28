@@ -36,27 +36,24 @@ I've worked as developer advocate at Fused, so I've been dog fooding the product
 It's so tempting to launch a claude code session, and immediately go do something else while the model runs. I've ended up starting 6-7 conversations all at once because of that and then ended up just jumping between session, one on a new feature,s another writing an exmaple, another organizing files locally, and yet another doing some research for a new project. This is a terrible way to work, at least for me. I end up scattered and half-assing everything. The way out of this for me has been to:
 
 1. Write ideas out
-2. Brainstorm implementation with LLM (quick feedback < 1min turnover)
-3. Experiment different implementatino
-4. Write decision on direction to take after experiments
-5. Let LLM implement all (this is where I can go work on something else)
-6. Bulk feedback writing
-7. Repeat from step 5. 
+2. Prototype multiple versions
+3. Write bulk feedback for LLM
+4. Iterate until happy 
 
-I've bene using Claude Code + Fused Render to create some explainers for some topics around geospatial analysis. I made ones for [Zarr](https://x.com/MaxLenormand/status/2079556266880315564?s=20), [H3 hexagon tiles](https://x.com/MaxLenormand/status/2080284304496550045?s=20) and [Cloud Optimized Geotiffs](https://x.com/MaxLenormand/status/2077741301055795593?s=20). Let's use the Zarr example as a case stufy of how I worked:
+I've been using Claude Code + Fused Render to create some explainers for some topics around geospatial analysis. I made ones for [Zarr](https://x.com/MaxLenormand/status/2079556266880315564?s=20), [H3 hexagon tiles](https://x.com/MaxLenormand/status/2080284304496550045?s=20) and [Cloud Optimized Geotiffs](https://x.com/MaxLenormand/status/2077741301055795593?s=20). Let's use the Zarr example as a case stufy of how I worked:
 
 1. Writing ideas out
 
 I start by writing down in a new text file, not in the terminal what I want to build
 
-![Zarr brainstorm](img/zarr_explainer_brainstorm.png)
+<img src="img/zarr_explainer_brainstorm.png" alt="Zarr brainstorm" style="width: 50%; display: block; margin: 0 auto;" />
 
 This serves multiple purposes:
 - Writing forces me to actually think about what I want. Who the target audience is, what do I want someone who goes through this explainer to walk away from, what is in & out of scope?
 - Provides the LLM a better idea of what it is I'm trying to do and provide some ideas. 
 - Grouding explainer in credible sources: either for what to say (i.e. content) or how to present it (UI, visual look, etc.). Especially for technical explainers, I don't want to rely just on an LLMs knowledge from training. There are a lot of well written pieces I already know about that I cna point to. These are pieces I've read myself, and have already deemed useful. I don't completely outsource this to LLMs either
 
-2. Brainstorm implementations with LLMs. 
+2. Prototype multiple versions
 
 LLMs have made code cheap and iteration fast. They lack good common sense and are terrible judges of the value of their own work, but I have that. So I use LLMs to try out many different ideas, implementation, kepe the best and kill the rest. 
 
@@ -76,7 +73,32 @@ I asked Claude to make multiple versions with more or less technical depths each
 
 _Left to right: least technical to most technical. Click any of them to see the full size._
 
-All in all I 
+This allows me to test different approaches, see & feel how they are to interact. In this case my goal is to build an interative explainer for Zarr, the file store format. In the end I ended up taking multiple ideas from each interation into a single one and refined it into what I think is a more complete explainer
+
+3. Write bulk feedback
+
+When i first started working on these projects I would write all my feedback directly into the CLI and send it over to my LLM to figure out. This quickly got complicated to track (did I already mention this mis-aligned button?) so now I write my feedback for LLMs direclty in a text file, something like this:
+
+```
+### Feedback on Zarr 1 page explainer
+[Link](...zarr_story_steps/explainer.html)
+
+- [Step 2](...zarr_story_steps/explainer.html?step=2)
+	- Would be great to actually show instead of a square, to scale rendering of lat / lon, i.e. rectangle and draw the contour of the world to give at least an idea this is world-wide example
+- [step 3](...zarr_story_steps/explainer.html?step=3)
+	- Looks visually exactly the same as step 2, hard to tell we went from full dataset to chunk apart from reading the numbers. Quick visual glance doesn't really show that 
+- Step 4
+	- Would be great if this was interactive, i.e. I could hover on this myself and see it update rather than it being dedicated 
+```
+
+I use a few elements to do this:
+- Fused render allows to link to query params for a specific section of the page, for example:
+
+```
+https://.../my_project.html?page=intro&color=black
+```
+
+We provided a scope 
 
 
 ### Ship fast
