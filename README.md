@@ -4,5 +4,7 @@ Working on computers with LLMs is a fast moving field. Part of the fun is sharin
 
 ## Pages
 
-- [Collaborating with LLMs](collaborating_with_LLMs.md) — an in-depth view of how I actually work with LLMs today: setup, workflow, feedback loops, shipping
-- [General ideas](general-ideas.md) — shorter learnings and rules of thumb from working with Fable
+- [Collaborating with LLMs](collaborating_with_LLMs.md)
+- [General ideas](general-ideas.md)
+
+More brain dumps also happening on [Twitter](https://x.com/MaxLenormand)
