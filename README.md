@@ -4,7 +4,7 @@ Working on computers with LLMs is a fast moving field. Part of the fun is sharin
 
 ## Pages
 
-- [Collaborating with LLMs](collaborating_with_LLMs.md)
 - [General ideas](general-ideas.md)
+- [Collaborating with LLMs](collaborating_with_LLMs.md)
 
 More brain dumps also happening on [Twitter](https://x.com/MaxLenormand)
