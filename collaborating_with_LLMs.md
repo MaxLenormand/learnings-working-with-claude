@@ -1,9 +1,31 @@
-# How I work in practice
+# Collaborating with LLMs
 
-_This is a more in depth view of how I actually work with LLMs today_
+_This is a more in depth view of how I actually work with LLMs today to get work done_
 
 _As practices around LLMs keep changing, knowing when a piece is from becomes more important: Last edited Monday July 27th 2026_
 
+This page is some of my writings from experimenting building interactive explainer to showcase how [Cloud Optimized Geotiff HTTP Range Requests](https://x.com/MaxLenormand/status/2077741301055795593?s=20), [H3 hexagons](https://x.com/MaxLenormand/status/2080284304496550045?s=20) or [Zarr](https://x.com/MaxLenormand/status/2079556266880315564?s=20) work. 
+
+These projects combine together a few different things:
+- Interactive elements
+- Working with real data
+- Educational
+
+I use Claude Code with [Fused Render](https://github.com/fusedio/fused-render) to make these projects though think of these more of a 'how to collaborate with LLMs' set of thoughts than something specifically applied to these tools. 
+
+### Principles
+
+**Write up front**
+
+LLMs have gotten great at building a lot of pieces of software you cna think of. They are also very eager to provide an opinion about what you're asking them if prompted. I do think LLMs should just be yet another tool -albeit a smart one, but a tool nonetheless- to help build something with a vision. 
+
+I'm trying to keep myself accountable to this by:
+- Writing what I want without asking for an LLM to give input the moment I feel even the smallest hint of feeling stuck
+- Stepping away from the terminal and writing outside of the temptation of a quick rapid question and answer
+
+**Iterate more**
+
+Once I've got a good sense of what it is I want, then I fire up a bunch of agents to provide multiple different versions of what I have in mind, try different implementations, 
 
 
 ### Setup
@@ -29,7 +51,7 @@ This is where I'm currently lacking, I still haven't tried out Codex and have ex
 
 I've worked as developer advocate at Fused, so I've been dog fooding the product. We're just about to release Fused Render, a framework for writing HTML + Python together for larger analytics work that's 1 click to dpeloy. It's taking Claude artefacts and putting them on steroids for larger work. This is mainly what I've been using
 
-### Common pitfalls
+### Workflow
 
 **I've never been so distracted**
 
@@ -98,8 +120,20 @@ I use a few elements to do this:
 https://.../my_project.html?page=intro&color=black
 ```
 
-We provided a scope 
+This allows me to pick & chose only specific components of the different existing versions I then ask Claude to put together into a single coherent versions, picking what I think are the best of each version.
 
+I provide my feedback in bulk, meaning I write it all specifically as I explore what's being built:
+
+![written feedback](/img/feedback_written.png)
+
+4. Iterate until happy
+
+LLMs are getting much better at one shotting complex projects, i.e. giving you a workable output given the first prompt, especially with models like Fable & Opus 5. This also has meant the work is changing every few months. At the time of writing this (July 2026), the work I find still required is:
+- **Writing**: Models are still really bad at providing writing that doesn't sound all the same. I usually replace whatever text a model outputed and replace it with my own. 
+- **UX / UI**: Buttons are misaligned, hover states don't make sense, these are still common things I provide feedback on the 2nd or 3rd iteraiton of a project. 
+- **Consicness**: Many of these models also love talking and showing off how much they know. Even with skills like [caveman](https://github.com/JuliusBrussee/caveman) or [i-have-adhd](https://github.com/ayghri/i-have-adhd) things don't always get cut out properly. This can happen where text is too long, or a page of one of the explainers goes in way too much details, while missing the most important concepts. 
+
+This is where I've found my work changing: I'm becoming more of a project manager, planning work out and then reviewing, providing feedback, the way an editor might also, much more than actually implementing the work itself anymore.
 
 ### Ship fast
 
@@ -108,3 +142,20 @@ It's all fun and games to go back & forth with Claude, polish one last thing, ad
 If nobody even clicks on my project, who cares if one of the button's hover state looks odd? Don't get me wrong I deeply care about making things well, but I want to also make things people also care about and want to use. When everyone can buidl with Claude, it's even harder to get other people to play around with your new project, everyone's busy playing with theirs. 
 
 Get validation quickly, from colleagues, friends, random internet people. Whatever the project, get to a MVP that's working well and iterate quickly. 
+
+### You're not the only one building
+
+A lot of people are building things with LLMs right now, there's an explosion of the number of apps people are building, but their usage is going down:
+
+![FT app usage](/img/ft_app_usage.png)
+
+I take a few takeaways from this:
+1. Just because you built certainly doesn't mean they will come
+2. Getting people to pay attention to what you build is worth spending more time & energy on
+
+I do think there's also an explosion of low effort, low quality stuff, even as models get better. I also believe it's easier than ever to make shiny-looking demos that are appealing at first glance, yet don't hold up when used for even a few minutes. I do think having a sense of design, good product practices and iteration is more important than ever.
+
+So:
+- Iterate often
+- Ship fast
+- Don't let AI drive all the work
