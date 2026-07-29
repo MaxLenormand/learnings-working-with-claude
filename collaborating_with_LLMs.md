@@ -34,7 +34,9 @@ Conversations about tools & gear are always the ones people go to first, it's co
 
 **Terminal: `cmux`**
 
-![Multiple Claude Code sessions running in parallel](img/parallel_claude_sessions.png)
+<p align="center">
+  <img src="img/parallel_claude_sessions.png" alt="Multiple Claude Code sessions running in parallel" width="70%" />
+</p>
 
 I like this because I have multiple ideas / projects going on at the same time. After trying a few things (namely multiple tabs in `iTerm2` tiled in different corerns of my screen) `cmux` is what I've stuck with. 
 
@@ -68,7 +70,9 @@ I've been using Claude Code + Fused Render to create some explainers for some to
 
 I start by writing down in a new text file, not in the terminal what I want to build
 
-<img src="img/zarr_explainer_brainstorm.png" alt="Zarr brainstorm" style="width: 50%; display: block; margin: 0 auto;" />
+<p align="center">
+  <img src="img/zarr_explainer_brainstorm.png" alt="Zarr brainstorm" width="50%" />
+</p>
 
 This serves multiple purposes:
 - Writing forces me to actually think about what I want. Who the target audience is, what do I want someone who goes through this explainer to walk away from, what is in & out of scope?
@@ -81,7 +85,9 @@ LLMs have made code cheap and iteration fast. They lack good common sense and ar
 
 For the Zarr explainer, I asked Fable to build 3 versions of this explainer, in different styles and with various degrees of depth. It's become so much simpler to try out ideas that might not be worth it and see how they turn out. I do recommend leaning into this hard, make mulitple versions. You have a machine that pumps out code, use it and keep homing your human judgement to ruthlessly kill all the bad ideas and only keep the good ones. It's simpler than ever to not be attached to ideas because you didn't spend weeks implementing it. 
 
-![Zarr attempts](img/zarr_attempts.png)
+<p align="center">
+  <img src="img/zarr_attempts.png" alt="Zarr attempts" />
+</p>
 
 I asked Claude to make multiple versions with more or less technical depths each time:
 
@@ -105,7 +111,9 @@ THere are 2 main ways I provide feedback:
 
 Fused render provides hte ability to directly edit by clicking a component in HTML and writing feedbakc there specifically. This is incredibly valuable to provide specific, targetted feedback to LLMs. 
 
-![fused render feedback](img/fused_render_feedback.png)
+<p align="center">
+  <img src="img/fused_render_feedback.png" alt="Fused render feedback" width="70%" />
+</p>
 
 All of this is then send as a JSON to Claude Code, and feedbakc is then applied. 
 
@@ -140,7 +148,9 @@ This allows me to pick & chose only specific components of the different existin
 
 I provide my feedback in bulk, meaning I write it all specifically as I explore what's being built:
 
-![written feedback](/img/feedback_written.png)
+<p align="center">
+  <img src="img/feedback_written.png" alt="Written feedback" width="60%" />
+</p>
 
 4. Iterate until happy
 
@@ -163,7 +173,11 @@ Get validation quickly, from colleagues, friends, random internet people. Whatev
 
 A lot of people are building things with LLMs right now, there's an explosion of the number of apps people are building, but their usage is going down:
 
-![FT app usage](/img/ft_app_usage.png)
+<p align="center">
+  <img src="img/ft_app_usage.png" alt="FT app usage" width="50%" />
+</p>
+
+_Source: Demirer et al, 2026, via Financial Times_
 
 I take a few takeaways from this:
 1. Just because you built certainly doesn't mean they will come
@@ -175,3 +189,7 @@ So:
 - Iterate often
 - Ship fast
 - Don't let AI drive all the work
+
+### Experiment often
+
+This space moves fast. So far, every 3-4 months I find myself re-evaluating what these models are capable of doing and what work I can now make with them. I do belie
