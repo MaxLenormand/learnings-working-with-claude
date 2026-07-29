@@ -99,6 +99,22 @@ This allows me to test different approaches, see & feel how they are to interact
 
 3. Write bulk feedback
 
+THere are 2 main ways I provide feedback:
+
+**Directly in Fused render**
+
+Fused render provides hte ability to directly edit by clicking a component in HTML and writing feedbakc there specifically. This is incredibly valuable to provide specific, targetted feedback to LLMs. 
+
+![fused render feedback](img/fused_render_feedback.png)
+
+All of this is then send as a JSON to Claude Code, and feedbakc is then applied. 
+
+I've found this works best when working on "final" elements, like UI changes that can often be a pain to pinpoint and iterate on, often otherwise requiring mulitple painful back and forth with Claude.
+
+**Separately, written in file**
+
+Especially early on in projects though, I do go back to a text file (usually the same I used to write my original prompts) to provide more in-depth details
+
 When i first started working on these projects I would write all my feedback directly into the CLI and send it over to my LLM to figure out. This quickly got complicated to track (did I already mention this mis-aligned button?) so now I write my feedback for LLMs direclty in a text file, something like this:
 
 ```
